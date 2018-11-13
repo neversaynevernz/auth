@@ -8,11 +8,6 @@
 ```
 package auth
 
-import (
-        "git.cloud.top/go/rest/rest"
-        srpauth "git.cloud.top/srp-go/auth/restful"
-)
-
 func init() {
         rest.Register(nil, "/auth/token", &srpauth.Auth{})
         rest.Register(nil, "/auth/fresh_token", &srpauth.Fresh{})
